@@ -1,0 +1,30 @@
+<style>
+    div{
+        background-color: black;
+        width: 300px;
+        height: 300px;
+        transition: 2s;
+    }
+    button{
+        padding: 20;
+        text-align: center;
+    }
+    .wightmax
+    {
+        width: 900px;
+    }
+</style>
+
+<div id="fight"></div>
+<br>
+<button onclick="change()">Change Color</button>
+
+
+<script>
+     var toji=document.getElementById("fight")
+    function change()
+    {
+      toji.setAttribute("class","wightmax")
+      toji.style.backgroundColor="red"
+    }
+</script>

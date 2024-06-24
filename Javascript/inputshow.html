@@ -1,0 +1,15 @@
+<input id="container" onkeyup="clicker()">
+<button>Click</button>
+<h1 id="heading"></h1>
+
+<script>
+    var inputer=document.getElementById("container")    
+    var headerin=document.getElementById("heading") 
+
+    function clicker()
+    {
+        var val=inputer.value
+        headerin.textContent=val
+    }
+
+</script>

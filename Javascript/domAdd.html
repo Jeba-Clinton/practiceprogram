@@ -1,0 +1,34 @@
+<center>
+    
+    <table>
+    <tr>
+        <td>Value1 :</td> <td><input type="number" placeholder="Enter the Number1"  id="one"> </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Value2 :</td> <td><input type="number" placeholder="Enter the Number2" id="two"> </td>
+    </tr>
+</table>
+
+<button onclick="addition()">Add</button>
+<p id="result">Result</p>
+</center>
+
+<script>
+
+    var number1=document.getElementById("one")
+    var number2=document.getElementById("two")
+
+    var Result=document.getElementById("result")
+function addition()
+{
+   var num1val=Number(number1.value)
+   var num2val=Number(number2.value);
+
+   var total=num1val+num2val;
+   result.textContent=total;
+}
+
+</script>

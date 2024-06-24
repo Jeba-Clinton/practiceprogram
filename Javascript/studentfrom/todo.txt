@@ -1,0 +1,153 @@
+<style>
+   #tabe{
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+   }
+   h1{
+    padding: 15px;
+   }
+   td{
+      border-color: black;
+      border-style: solid;
+      width: 70px;
+      text-align: center;
+   }
+   #coursei{
+     display:block;
+     width: 177px;
+   }
+   #btn{
+
+    background-color: aqua;
+    text-align: center;
+   }
+   
+
+</style>
+
+<center>
+
+    <h1>STUDENT FORM</h1>
+   <table id="tabe">
+      <tr>
+          <td >Name</td> <td><input id="namei" type="text" placeholder="Enter Name"></td>    
+      </tr>
+      <tr>
+        <td >Age</td> <td><input id="agei" type="number" placeholder="Enter Age"></td>    
+      </tr>
+      <tr>
+        <td >Gender</td> <td style="text-align: left;">
+          <input id="geni1" type="radio" name="toji killer" value="Male">Male
+          <input id="geni2" type="radio" name="toji killer" value="Female">Female
+           </td>    
+      </tr>
+      <tr>
+        <td >Course's</td> <td>
+          <select id="coursei">
+            <option>Java Program</option>
+            <option>C Program</option>
+            <option>Full Stacker</option>
+            <option>HTML and CSS</option>
+            <option>Javascript</option>
+          </select>
+        </td>    
+      </tr>
+      <tr>
+        <td >E-mail</td> <td><input id="emaili" type="text" placeholder="Enter Mail"></td>    
+      </tr>
+      <tr style="text-align: center;display: block;width: 80px;">
+        <td style="display: inline-block;text-align:center; border-color:black;width: 260px;" >
+           <button id="btn" style="width: 260px; display: inline-block;text-align: center;" onclick="adder()">Save</button>
+         </td>
+      </tr>
+   </table>
+<br>
+
+<br>
+   
+<table style="border: 2px;border-color: black;border-style: solid;" id="result">
+   <tr>
+      <td style="text-align: center;" >
+        Name
+      </td>
+      
+      <td>
+        Age
+      </td>
+
+      <td>
+        Genter
+      </td>
+
+      <td>
+        course
+      </td>
+
+      <td>
+        E-Mail
+      </td>
+
+      <td id="action">
+        Action
+      </td>
+    
+   </tr>
+
+</table>
+
+</center>
+
+
+<script>
+
+   var namei=document.getElementById("namei")
+   var agei=document.getElementById("agei")
+   var geni=document.getElementById("geni")
+   var coursei=document.getElementById("coursei")
+   var emaili=document.getElementById("emaili")
+
+   var tablere=document.getElementById("result")
+    
+    function adder()
+    {
+          var tarow=document.createElement("td")
+          tarow.innerHTML=namei.value;
+          tablere.append(tarow)
+
+          var tarow=document.createElement("td")
+          tarow.innerHTML=agei.value;
+          tablere.append(tarow)
+
+            var geni1= document.getElementById('geni1')
+            var geni2= document.getElementById('geni2')
+
+            if(geni1.checked){
+                   var tarow=document.createElement("td")
+                   tarow.innerHTML=geni1.value;
+                   tablere.append(tarow)
+            }
+            else if(geni2.checked){
+                   var tarow=document.createElement("td")
+                   tarow.innerHTML=geni2.value;
+                   tablere.append(tarow)
+            }
+
+          var tarow=document.createElement("td")
+          tarow.innerHTML=coursei.value;
+          tablere.append(tarow)
+          
+          var tarow=document.createElement("td")
+          tarow.innerHTML=emaili.value
+          tablere.append(tarow)
+     
+          var row=document.createElement("tr")
+          tablere.appendChild(row)
+    }
+
+    function deleter(event){
+        this.closest('tr').remove()
+    }
+
+
+</script>

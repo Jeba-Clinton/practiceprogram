@@ -1,0 +1,56 @@
+<style>
+ .overlay{
+   background-color: black;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   opacity: 0.8;
+   z-index: 1;
+   display: none;
+ }
+
+.popupbox{
+  background-color: white;
+  color: black;
+  width: 40%;
+  height: 20%;
+  position: absolute;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2;
+  left: 30%;
+  margin-top: 30px;
+  display: none;
+}
+
+</style>
+
+<button onclick="shower()">Show</button>
+<div class="overlay"></div>
+<div class="popupbox">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae eos perferendis, magni at obcaecati sit ullam debitis quae, nisi minus esse, rem sequi facere aliquam. Id voluptas quia optio? Ullam voluptas neque vitae excepturi illo minima voluptates, cupiditate sed earum, aliquid laborum repudiandae architecto dolor iure tenetur laboriosam quaerat corrupti.
+    <br>
+    <br>
+
+    <button onclick="cancaler()">Close</button>
+
+</div>
+
+<script>
+ var overlay=document.querySelector(".overlay")
+ var popupbox=document.querySelector(".popupbox")
+
+ function shower()
+ {
+    overlay.style.display='block' 
+    popupbox.style.display='block'
+}
+function cancaler()
+ {
+    overlay.style.display='none' 
+    popupbox.style.display='none'
+}
+
+</script>
